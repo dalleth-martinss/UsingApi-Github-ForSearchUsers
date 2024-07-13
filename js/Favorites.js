@@ -20,6 +20,14 @@ export class Favorites {
          }
       ]
      
+      delete(user){
+         //recria um array, se retornar true, add no array se retornar false retira do array
+         const filteredEntries = this.entries.filter(entry => {
+         return false
+         })
+         console.log(entry)
+      }
+
    }
 }
 
@@ -40,6 +48,18 @@ export class FavoritesView extends Favorites {
 
          row.querySelector('.user img').src = 
          `https://github.com/${user.login}.png`
+         row.querySelector('.user img').alt = `Image de ${user.name}`
+         row.querySelector('.user p').textContent = user.name
+         row.querySelector('.user span').textContent = user.login
+         row.querySelector('.repositories').textContent = user.public_repos
+         row.querySelector('.followers').textContent = user.followers
+         
+         row.querySelector('.remove').onclick = () => {
+            const isOk = confirm('Tem certeza que deseja deletar?')
+            if(isOk){
+               this.delete(user)
+            }
+         }
 
          this.tbody.append(row)
       })
@@ -55,10 +75,10 @@ export class FavoritesView extends Favorites {
             <p>Diego Fernandes</p>
             <span>diego3g</span>
          </td>
-         <td class="Repositories">
+         <td class="repositories">
             48
          </td>
-         <td class="Followers">
+         <td class="followers">
             22503
          </td>
          <td>
@@ -68,9 +88,9 @@ export class FavoritesView extends Favorites {
       return tr
    }
 
-removeAllTr() {
-   this.tbody.querySelectorAll('tr').forEach((tr) => {
-   tr.remove()
-   })
-}
+   removeAllTr() {
+      this.tbody.querySelectorAll('tr').forEach((tr) => {
+      tr.remove()
+      })
+   }
 }

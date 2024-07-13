@@ -5,29 +5,19 @@ export class Favorites {
    }
 
    load(){
-      this.entries = [
-         {
-            login: 'dalleth-martinss',
-            name: "Dalleth Martins",
-            public_repos: '43',
-            followers: '4'
-         },
-         {
-            login: 'diego3g',
-            name: "Diego Fernandes",
-            public_repos: '48',
-            followers: '22503'
-         }
-      ]
-     
-      delete(user){
-         //recria um array, se retornar true, add no array se retornar false retira do array
-         const filteredEntries = this.entries.filter(entry => {
-         return false
-         })
-         console.log(entry)
-      }
 
+      const entries = JSON.parse( localStorage.getItem
+         ('@gethub-favorites: ')) || []
+        
+   }
+   
+   delete(user){
+      //recria um array, se retornar true, add no array se retornar false retira do array
+      const filteredEntries = this.entries
+      .filter(entry => entry.login !== user.login)
+
+      this.entries = filteredEntries
+      this.update()
    }
 }
 

@@ -1,4 +1,3 @@
-
 export class GithubUser{
    static search(username){
       const endpoint = `https://api.github.com/users/${username}`
@@ -33,6 +32,11 @@ export class Favorites {
         
    }
    
+   async add(username){
+      const user = await GithubUser.search(username)
+      console.log(user)
+   }
+
    delete(user){
       //recria um array, se retornar true, add no array se retornar false retira do array
       const filteredEntries = this.entries
@@ -57,8 +61,8 @@ export class FavoritesView extends Favorites {
       const addButton = this.root.querySelector('.search button')
       addButton.onclick = () => {   //pega o evento do click, quando houver o evento ele vai entrar no #app que é root, e vai pegar o valor do input
          const {value}  = this.root.querySelector('.search input')//desestrutura e pega só o velue do input
-         console.log(value)
-
+         
+         this.add(value)
          /*const input  = this.root.querySelector('.search input')
           ".dir" vai pegar o input q está sendo mostrado como HTML e vai mostrar como um OBJT
          console.dir(input) */

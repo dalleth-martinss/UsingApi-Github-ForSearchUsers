@@ -49,7 +49,21 @@ export class FavoritesView extends Favorites {
       
       this.tbody = this.root.querySelector('table tbody') 
 
+      this.onadd()
       this.update()
+   }
+
+   onadd(){
+      const addButton = this.root.querySelector('.search button')
+      addButton.onclick = () => {   //pega o evento do click, quando houver o evento ele vai entrar no #app que é root, e vai pegar o valor do input
+         const {value}  = this.root.querySelector('.search input')//desestrutura e pega só o velue do input
+         console.log(value)
+
+         /*const input  = this.root.querySelector('.search input')
+          ".dir" vai pegar o input q está sendo mostrado como HTML e vai mostrar como um OBJT
+         console.dir(input) */
+      }
+   
    }
 
    update() { 

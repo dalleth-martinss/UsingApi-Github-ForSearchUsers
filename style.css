@@ -38,7 +38,7 @@ button{
 }
 #app{
    padding: 2rem;
-   max-width: 500px;
+   max-width: 600px;
    margin: 0 auto;
 }
 
@@ -77,7 +77,7 @@ header h1{
    filter: brightness(1.1);
 }
 table{
-   width: 100%;
+   width: 120%;
    border-collapse: collapse;
 
    /* funciona como 1º eixoX | 2º eixoY | 3º é o borrado(suavidade) 4° crescimento para + ou - */
@@ -89,7 +89,7 @@ table * {
 }
 table th{
    background-color: var(--primary-color);
-   text-align: left;
+   text-align: center;
    font-weight: normal;
    padding: 1.5rem;
 }
@@ -126,7 +126,7 @@ td.user a {
 }
 td.user a p {
    font-weight: bold;
-}
+  }
 td .remove{
    background: none;
    border: none;

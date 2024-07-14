@@ -1,27 +1,13 @@
+import { GithubUser } from "./GithubUser.js" 
 
-export class GithubUser {
-   static search(username) {
-      const endpoint = `https://api.github.com/users/${username}`
 
-      //fetch é o cara que vai buscar qualquer endereço de URL que nós quisermos
-      //ele é uma promessa,quando finalizar a promessa de pegar os dados da URL,
-      //ele vai transformar esse dado em JSON
-      return fetch(endpoint)
-         .then(data => data.json()) // transformar o dado em JSON 
-         .then(({ login, name, public_repos, followers }) => ({ //desestrutura, pega os dados e retorn um Objt
-            login,
-            name,
-            public_repos,
-            followers
-         }))
-   }
-}
-
+//classe trabalha somente com os dados
 export class Favorites {
    constructor(root) {
       this.root = document.querySelector(root)
       this.load() // Inicializa this.entries chamando load()
    }
+
    load() {
       this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || [] // Atribui a this.entries
    }
@@ -31,7 +17,14 @@ export class Favorites {
    }
 
    async add(username) {
-      try {
+    
+     try {
+      const userExists = this.entries.find(entry => entry.login === username)
+      if(userExists) {
+         throw new Error('Usuário já cadastrado')
+      }
+
+
          const user = await GithubUser.search(username)
          if (user.login === undefined) {
             throw new Error('Usuário não encontrado!')
@@ -54,6 +47,7 @@ export class Favorites {
    }
 }
 
+//classe trabalha com os eventos e manipulação da DOM
 export class FavoritesView extends Favorites {
    constructor(root) {
       super(root)
@@ -83,6 +77,7 @@ export class FavoritesView extends Favorites {
 
          row.querySelector('.user img').src = `https://github.com/${user.login}.png`
          row.querySelector('.user img').alt = `Image de ${user.name}`
+         row.querySelector('.user a').href = `https://github.com/${user.login}`
          row.querySelector('.user p').textContent = user.name
          row.querySelector('.user span').textContent = user.login
          row.querySelector('.repositories').textContent = user.public_repos
@@ -104,10 +99,10 @@ export class FavoritesView extends Favorites {
 
       tr.innerHTML = `
          <td class="user">
-            <img src="https://github.com/diego3g.png" alt="Foto de Diego">
-            <a href="https://github.com/diego3g" target="_blank"></a>
-            <p>Diego Fernandes</p>
-            <span>diego3g</span>
+            <img src="https://github.com/dalleth-martinss.png" alt="Foto de Diego">
+            <a href="https://github.com/dalleth-martinss" target="_blank"></a>
+            <p>Dalleth Martins</p>
+            <span>dalleth-martinss</span>
          </td>
          <td class="repositories">
             48

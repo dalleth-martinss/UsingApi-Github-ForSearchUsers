@@ -22,7 +22,6 @@ export class Favorites {
       this.root = document.querySelector(root)
       this.load() // Inicializa this.entries chamando load()
    }
-
    load() {
       this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || [] // Atribui a this.entries
    }

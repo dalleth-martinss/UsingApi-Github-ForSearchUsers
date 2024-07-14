@@ -5,7 +5,7 @@ Este projeto permite buscar usuários no Github e exibir informações sobre ele
 ## Link do Projeto 👩🏻‍💻🔗❤️
 Você pode acessar a versão em produção do projeto através do link abaixo:
 
-[Link do Projeto](https://dalleth-martinss.github.io/UsingApi-Github-ForSearchUsers/)  
+[Link do Projeto](https://using-api-github-for-search-users.vercel.app/)  
 
 ## Funcionalidades ⚙️
 

@@ -1,8 +1,13 @@
-# Usando API Github
+# Exercicio - Usando API Github  👩🏻‍💻📚
 
 Este projeto permite buscar usuários no Github e exibir informações sobre eles utilizando a API do Github. 
 
-## Funcionalidades
+## Link do Projeto 👩🏻‍💻🔗❤️
+Você pode acessar a versão em produção do projeto através do link abaixo:
+
+[Link do Projeto](https://dalleth-martinss.github.io/UsingApi-Github-ForSearchUsers/)  
+
+## Funcionalidades ⚙️
 
 - Buscar usuários do Github pelo nome de usuário
 - Exibir informações do usuário, como login, nome, repositórios públicos e seguidores
@@ -10,17 +15,12 @@ Este projeto permite buscar usuários no Github e exibir informações sobre ele
 - Remover usuários favoritos
 - Salvar favoritos no LocalStorage
 
-## Ferramentas Utilizadas
+## Ferramentas Utilizadas 🛠️
 
 - Visual Studio Code (VScode)
 - HTML
 - CSS
 - JavaScript
-
-## Link do Deploy
-Você pode acessar a versão em produção do projeto através do link abaixo:
-
-[Link do Deploy](https://dalleth-martinss.github.io/UsingApi-Github-ForSearchUsers/)  
 
 ## Como usar  ❤️
 
@@ -33,7 +33,7 @@ Você pode acessar a versão em produção do projeto através do link abaixo:
 
 Contribuições são sempre bem-vindas! Para contribuir, por favor, faça um fork do repositório e crie um Pull Request com suas alterações.
 
-## Licença
+## Licença📌
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://opensource.org/license/MIT) para mais detalhes.
 

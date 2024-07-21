@@ -1,13 +1,13 @@
 # Exercicio - Usando API Github  👩🏻‍💻📚
 
-Este projeto permite buscar usuários no Github e exibir informações sobre eles utilizando a API do Github. 
+Este projeto permite buscar usuários no Github e exibir informações sobre eles utilizando a API do Github e se caso desejar poderá excluir também. 
 
 ## Link do Projeto 👩🏻‍💻🔗❤️
 Você pode acessar a versão em produção do projeto através do link abaixo:
 
 [Link do Projeto](https://using-api-github-for-search-users.vercel.app/)  
 
-## Funcionalidades ⚙️
+## Funcionalidades 👩🏻‍💻⚙️
 
 - Buscar usuários do Github pelo nome de usuário
 - Exibir informações do usuário, como login, nome, repositórios públicos e seguidores
@@ -15,21 +15,21 @@ Você pode acessar a versão em produção do projeto através do link abaixo:
 - Remover usuários favoritos
 - Salvar favoritos no LocalStorage
 
-## Ferramentas Utilizadas 🛠️
+## Ferramentas Utilizadas 👩🏻‍💻🛠️
 
 - Visual Studio Code (VScode)
 - HTML
 - CSS
 - JavaScript
 
-## Como usar  ❤️
+## Como usar  👩🏻‍💻❤️
 
 1. Clone o repositório para sua máquina local.
 2. Abra o projeto no VScode.
 3. Execute o arquivo principal para iniciar a aplicação.
 4. Utilize os métodos disponíveis para listar e ordenar as pessoas cadastradas.
 
-## Contribuições 📌
+## Contribuições 👩🏻‍💻📌
 
 Contribuições são sempre bem-vindas! Para contribuir, por favor, faça um fork do repositório e crie um Pull Request com suas alterações.
 
